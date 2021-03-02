@@ -132,6 +132,24 @@
 
     </script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var query = location.search.slice(1);
+		var partes = query.split('&');
+		var data = {};
+		partes.forEach(function (parte) {
+		    var chaveValor = parte.split('=');
+		    var chave = chaveValor[0];
+		    var valor = chaveValor[1];
+		    data[chave] = valor;
+		});
+
+		var url = data['src'];
+
+		     $(document).ready(function () {
+		        $('.custom-url a').attr('href', "https://mestredarenda.com/?" + query);
+		});
+	  </script>
 
 
       <div class="mx-auto divs" style="width: 60%;border-bottom: 1px solid #E5E5E5">
@@ -203,7 +221,7 @@ E enquanto pessoas no Twitter criticavam o aplicativo, alguns homens tentavam a 
       <div class="mx-auto divs" style="width: 40%;margin-top: 20px">
 
 
-        <center><a href="http://mestredarenda.com/"><button type="button" class="btn btn-danger" >Clique Aqui para VER o VÍDEO >>
+        <center class="custom-url"><a href="http://mestredarenda.com/"><button type="button" class="btn btn-danger" >Clique Aqui para VER o VÍDEO >>
 </button></a></center>
 
         <p>
